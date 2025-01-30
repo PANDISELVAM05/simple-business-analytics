@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Analytics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="{{ url_for('static', filename='js/index.js') }}" defer></script>
+</head>
+<body>
+    <h1 class="title">BUSINESS ANALYTICS</h1>
+    <div class="upload_box">
+        <h4 class="upload_title">Upload CSV file</h4>
+        <form id="upload-form" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".csv" required>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+    <div id="result" class="results">
+        <h2>Results</h2>
+        <div id="forecasting-results">
+            <h3>Forecasting Results</h3>
+            <img id="forecasting-img" src="" alt="Forecasting Results"  class="Forecasting-Results">
+        </div>
+        <div id="model-comparison">
+            <h3>Model Comparison</h3>
+            <img id="comparison-img" src="" alt="Model Comparison" class="Model-Comparison">
+        </div>
+        <div id="metrics">
+            <h3>Performance Metrics</h3>
+            <table id="metrics-table" class="table" border="1">
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>RMSE</th>
+                        <th>MAE</th>
+                        <th>R2</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    
+</body>
+</html>
